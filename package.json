@@ -1,6 +1,6 @@
 {
   "name": "@danilovmaxim/react-native-md-sdk",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "MD",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
