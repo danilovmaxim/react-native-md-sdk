@@ -1,6 +1,6 @@
 {
   "name": "@danilovmaxim/react-native-md-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "MD",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -41,6 +41,10 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/danilovmaxim"
   },
+  "repository": {
+		"type": "git",
+		"url": "git+https://github.com/danilovmaxim/rn-packages.git"
+	},
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
     "@react-native-community/eslint-config": "^2.0.0",
