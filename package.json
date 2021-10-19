@@ -44,7 +44,7 @@
   },
   "homepage": "https://github.com/danilovmaxim/danilovmaxim-react-native-md-sdk#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://npm.pkg.github.com/danilovmaxim"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
