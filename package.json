@@ -1,6 +1,6 @@
 {
   "name": "@danilovmaxim/react-native-md-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MD",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -36,13 +36,8 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/danilovmaxim/danilovmaxim-react-native-md-sdk",
   "author": "Maksym Danylov <maksim_danilov@yahoo.com> (https://github.com/danilovmaxim)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/danilovmaxim/danilovmaxim-react-native-md-sdk/issues"
-  },
-  "homepage": "https://github.com/danilovmaxim/danilovmaxim-react-native-md-sdk#readme",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/danilovmaxim"
   },
