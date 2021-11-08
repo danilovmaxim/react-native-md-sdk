@@ -2,8 +2,8 @@ name: Build Demo Apps
 
 on: pull_request
 jobs:
-  iOSBuild:
-    name: Build Demo Apps
+  setup:
+    name: Setup environment
     runs-on: macos-latest
     steps:
       - name: Checkout
@@ -11,13 +11,16 @@ jobs:
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v1
       - uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true      
+      - run: ls
       - name: Install node modules
         run: |
           cd example
-          pwd
           yarn install
+  build_ios:
+    name: Build iOS demo app
+    needs: setup
+    runs-on: macos-latest
+    steps:
       - name: Fastlane build iOS
         run: | 
           cd example/ios
