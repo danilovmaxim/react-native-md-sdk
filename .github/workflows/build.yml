@@ -1,0 +1,25 @@
+name: Build Demo Apps
+
+on: pull_request
+jobs:
+  iOSBuild:
+    name: Build Demo Apps
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+      - uses: c-hive/gha-yarn-cache@v1
+      - name: Move to Example directory
+        run: |
+          cd example
+      - name: Install node modules
+        run: |
+          yarn install
+      - name: Install Pods
+        run: |
+          cd ios
+          pod install
+      - name: Run iOS demo app
+        run: |
+          yarn ios
