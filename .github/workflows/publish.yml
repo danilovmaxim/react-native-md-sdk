@@ -1,6 +1,5 @@
 name: Publish to GitHub Packages
-on: 
-  workflow_dispatch:
+on: pull_request
 jobs:
   publish_package:
     name: Publish npm package
