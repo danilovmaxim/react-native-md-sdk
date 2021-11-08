@@ -6,4 +6,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Print messages
-        run: echo "HELLO WORLD ❤️‍🔥❤️‍🔥❤️‍🔥"
+        run: echo "HELLO WORLD ❤️‍🔥❤️‍🔥❤️‍🔥 + ❣️❣️❣️"
