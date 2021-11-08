@@ -1,0 +1,26 @@
+name: Build demo apps
+on: pull_request
+jobs:
+  build_demo_app:
+    name: Build demo app
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        directory:
+          - android
+          - ios
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+      - uses: c-hive/gha-yarn-cache@v1
+      - uses: ruby/setup-ruby@v1
+      - name: Install node_modules
+        run: |
+          cd example
+          yarn install
+      - name: Fastlane build ${{ matrix.directory }}
+        run: | 
+          cd example/${{ matrix.directory }}
+          bundle install
+          bundle exec fastlane build

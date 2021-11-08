@@ -1,0 +1,9 @@
+name: Publish to GitHub Packages
+on: [workflow_dispatch]
+jobs:
+  publish_package:
+    name: Publish npm package
+    runs-on: macos-latest
+    steps:
+      - name: Print messages
+        run: echo "HELLO WORLD ❤️‍🔥❤️‍🔥❤️‍🔥 + ❣️❣️❣️"
