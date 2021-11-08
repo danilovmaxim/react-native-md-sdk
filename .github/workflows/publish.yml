@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   publish_package:
-    name: Publish Package
+    name: Publish npm package
     runs-on: macos-latest
     steps:
       - name: Print messages
