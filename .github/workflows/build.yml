@@ -24,9 +24,12 @@ jobs:
           yarn install
       - name: Install Pods
         run: |
+          pwd
           cd example/ios
           pwd
           pod install
       - name: Run iOS demo app
         run: |
+          pwd
+          cd example
           yarn ios
