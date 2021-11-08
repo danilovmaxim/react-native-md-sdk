@@ -10,7 +10,10 @@ jobs:
         uses: actions/checkout@v2
       - uses: actions/setup-node@master
       - uses: c-hive/gha-yarn-cache@v1
-      - name: Move to Example directory
+      - name: Bundler
+        run: |
+          bundle install
+      - name: Move to 'Example' directory
         run: |
           cd example
       - name: Install node modules
