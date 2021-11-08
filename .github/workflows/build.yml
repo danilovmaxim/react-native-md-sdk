@@ -12,24 +12,14 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v1
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically      
-      - name: Move to 'Example' directory
-        run: |
-          cd example
+          bundler-cache: true      
       - name: Install node modules
         run: |
           cd example
           pwd
           yarn install
-      - name: Install Pods
-        run: |
-          pwd
+      - name: Fastlane build iOS
+        run: | 
           cd example/ios
-          pwd
-          pod install
-      - name: Run iOS demo app
-        run: |
-          pwd
-          cd example
-          yarn ios
+          bundle install
+          bundle exec fastlane build
