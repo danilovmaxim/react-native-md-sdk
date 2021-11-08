@@ -19,10 +19,13 @@ jobs:
           cd example
       - name: Install node modules
         run: |
+          cd example
+          pwd
           yarn install
       - name: Install Pods
         run: |
-          cd ios
+          cd example/ios
+          pwd
           pod install
       - name: Run iOS demo app
         run: |
