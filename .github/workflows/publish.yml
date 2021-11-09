@@ -4,6 +4,20 @@ jobs:
   publish_package:
     name: Publish npm package
     runs-on: macos-latest
+    permissions: 
+      contents: read
+      packages: write 
     steps:
-      - name: Print messages
-        run: echo "HELLO WORLD ❤️‍🔥❤️‍🔥❤️‍🔥 + ❣️❣️❣️"
+      - name: Checkout
+        uses: actions/checkout@v2
+      # Setup .npmrc file to publish to GitHub Packages
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@danilovmaxim'
+      - name: Install node_modules
+        run: yarn install
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_PUBLISH_TOKEN }}
